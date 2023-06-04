@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_musical_genre,access_musical_genre,model_musical_genre,,1,1,1,1
+access_musical_song,access_musical_song,model_musical_song,,1,1,1,1

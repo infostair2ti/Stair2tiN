@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_point_e" model="ir.ui.view">
+        <field name="name">res.partner.view.form.point_e</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <label for="musical_genre_ids" />
+                <div class="o_row">
+                    <field name="musical_genre_ids" widget="many2many_tags" />
+                    <button icon="fa-refresh" name="search_genre" type="object" class="oe_highlight"/>
+                
+                </div>    
+                
+                <button string="Recomendar Canciones" name="search_songs" type="object" class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//notebook" position="before">
+                <group>    
+                    <!-- <label for="musical_songs_ids" /> -->
+                    <!-- <form> -->
+                        <field name="musical_songs_ids">
+                            <tree create="false" delete="false" editable="false">
+                                <field name="name" readonly="1"/>
+                                <field name="link" readonly="1"/>
+                            </tree>
+                        </field>
+                    <!-- </form> -->
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
